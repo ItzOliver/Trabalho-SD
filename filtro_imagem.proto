@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service filtro {
+    rpc aplicaFiltro (UploadImageRequest) returns (ImageResponse);
+}
+
+message UploadImageRequest {
+    bytes imagem = 1;
+    string nome_imagem = 2;
+    int32 filtro = 3;
+}
+
+message ImageResponse {
+    bytes imagemModificada = 1;
+}
