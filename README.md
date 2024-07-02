@@ -1,7 +1,7 @@
 # 📡 Trabalho gRPC
 Bem-vindo! Esse repositório contém o projeto final da disciplina de Sistemas Distribuídos bem como as intruções para reprodução e execução do código.
 
-## Conteúdo do Repositório
+## 📚 Conteúdo do Repositório 
 - Cliente implementado em Node.JS
 - Servidor implementado em Python
 - Arquivos de definição da comunicação gRPC
