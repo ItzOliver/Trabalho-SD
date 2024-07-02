@@ -18,7 +18,7 @@ const packageDefinition = protoLoader.loadSync(
 const filtro_imagem_proto = grpc.loadPackageDefinition(packageDefinition).filtro;
 
 function main() {
-    const client = new filtro_imagem_proto('localhost:50051', grpc.credentials.createInsecure());
+    const client = new filtro_imagem_proto('192.168.172.192:50051', grpc.credentials.createInsecure());
 
     console.log("\nSelecione qual filtro você deseja aplicar na imagem:");
     console.log("1 - Preto e Branco");
