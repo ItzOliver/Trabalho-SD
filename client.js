@@ -18,7 +18,7 @@ const packageDefinition = protoLoader.loadSync(
 const filtro_imagem_proto = grpc.loadPackageDefinition(packageDefinition).filtro;
 
 function main() {
-    const client = new filtro_imagem_proto('192.168.172.192:50051', grpc.credentials.createInsecure());
+    const client = new filtro_imagem_proto('192.168.1.9:50051', grpc.credentials.createInsecure());
 
     console.log("\nSelecione qual filtro você deseja aplicar na imagem:");
     console.log("1 - Preto e Branco");
@@ -61,7 +61,7 @@ function main() {
                     console.error(err);
                 } else {
                     console.log('Status: Sucesso');
-                    fs.writeFileSync(nome_imagem + tipo_filtro + '.jpg', response.imagemModificada); // corrigir
+                    fs.writeFileSync(nome_imagem + tipo_filtro + '.jpg', response.imagemModificada);
                 }
             });
         } else {

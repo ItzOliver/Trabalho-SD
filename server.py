@@ -123,7 +123,7 @@ def serve():
     print("Iniciando Server!")
     server = grpc.server(futures.ThreadPoolExecutor(max_workers = 10)) ### especifica o número de threads disponíveis
     filtro_imagem_pb2_grpc.add_filtroServicer_to_server(filtroServicer(), server)
-    server.add_insecure_port("192.168.172.192:50051")
+    server.add_insecure_port("192.168.1.9:50051")
     server.start()
     print("ouvindo...")
     server.wait_for_termination()
